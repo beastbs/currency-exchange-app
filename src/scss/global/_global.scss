@@ -14,6 +14,21 @@ html {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	font-family: "Poppins-Regular", sans-serif;
-	background-color: $primary-color1;
+	background-color: $main-background-color;
 }
+
+button{
+	cursor: pointer;
+}
+
+#root{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
