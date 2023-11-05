@@ -1,5 +1,7 @@
 import "@src/app";
-import "@src/scss/index.scss";
+import "@scss/index.scss";
+
+import "./utils/countries-data";
 
 import currencyService from "@services/currency.service";
 

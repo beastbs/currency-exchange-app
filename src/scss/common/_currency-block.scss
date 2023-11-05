@@ -1,4 +1,5 @@
 $input-box-shadow-transition: box-shadow 0.3s linear;
+$hover-copy-icon-background: rgba(0,0,0,0.3);
 
 .currency-block {
 	width: 100%;
@@ -105,8 +106,12 @@ $input-box-shadow-transition: box-shadow 0.3s linear;
 			margin: 0;
 		}
 	&__copy {
-		display: none;
-		padding-right: 10px;
+		display: block;
+		padding: 2px;
+		margin-right: 5px;
 		cursor: pointer;
+		&:hover{
+			background-color: $hover-copy-icon-background;
+		}
 	}
 }
