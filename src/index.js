@@ -1,4 +1,6 @@
+import "@src/app";
 import "@src/scss/index.scss";
+
 import currencyService from "@services/currency.service";
 
 async function getCurrList(){
@@ -6,3 +8,4 @@ async function getCurrList(){
 	console.log(result);
 }
 // getCurrList()
+

@@ -57,17 +57,40 @@ $input-box-shadow-transition: box-shadow 0.3s linear;
 		align-items: center;
 		color: $input-text-color;
 		background-color: $main-background-color;
-		border-bottom: 2px solid rgba(0, 0, 0, 0.86);
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
-		&:hover{
-			background-color: $active-background-color;
-			border-bottom: 2px solid $primary-color1;
+
+		border: none;
+		border-bottom: 2px solid transparent;
+		position: relative;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: $primary-color1;
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 0.5s ease;
 		}
-		&:hover .currency-block__copy{
+		&-active {
+			background-color: $focus-background-color;
+			&:before {
+				transform: scaleX(1);
+			}
+		}
+		&-active .currency-block__copy{
 			display: block;
 		}
-		& [name="amount"] {
+		&:hover{
+			background-color: $focus-background-color;
+		}
+	}
+	&__input-amount {
 			width: 95%;
 			padding: 15px;
 			font-size: 2.6rem;
@@ -81,9 +104,9 @@ $input-box-shadow-transition: box-shadow 0.3s linear;
 			-webkit-appearance: none;
 			margin: 0;
 		}
-	}
 	&__copy {
 		display: none;
 		padding-right: 10px;
+		cursor: pointer;
 	}
 }
