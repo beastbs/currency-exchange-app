@@ -1,4 +1,4 @@
-const countryList = {
+export const countryList = {
 	"AED": {
 		"name": "United Arab Emirates Dirham",
 		"demonym": "UAE",

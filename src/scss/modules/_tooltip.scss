@@ -1,0 +1,25 @@
+$tooltip-background-color: #4e4d4d;
+
+.tooltip {
+	position: absolute;
+	top: -44px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: $tooltip-background-color;
+	border-radius: 3px;
+	&:after{
+		content: "";
+		display: block;
+		width: 10px;
+		height: 10px;
+		background-color: $tooltip-background-color;
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		transform: translate(-50%, 50%) rotate(45deg);
+	}
+	&__text{
+		font-size: 0.6em;
+		padding: 3px 6px;
+	}
+}
